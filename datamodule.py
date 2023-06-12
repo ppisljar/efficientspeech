@@ -131,7 +131,7 @@ class LJSpeechDataset(Dataset):
         speaker = self.speaker[idx]
         #speaker_id = self.speaker_map[speaker]
         raw_text = self.raw_text[idx]
-        phoneme = np.array(text_to_sequence(self.text[idx], self.cleaners))
+        phoneme = np.array(text_to_sequence(self.raw_text[idx], self.cleaners))
         mel_path = os.path.join(
             self.preprocessed_path,
             "mel",
