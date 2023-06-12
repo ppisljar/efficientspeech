@@ -8,9 +8,9 @@ The default is a set of ASCII characters that works well for English or text tha
 from text import cmudict, tagdict
 
 _pad = "_"
-_punctuation = "!'(),.:;? "
+_punctuation = "\"!'(),.:;? "
 _special = "-/"
-_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzščžŠČŽđ"
 _silences = ["@sp", "@spn", "@sil"]
 
 # Prepend "@" to ARPAbet symbols to ensure uniqueness (some are the same as uppercase letters):
@@ -24,7 +24,7 @@ symbols = (
     + list(_special)
     + list(_punctuation)
     + list(_letters)
-    + _arpabet
+    #+ _arpabet
     #+ _tagdict
     #+ _pinyin
     + _silences
